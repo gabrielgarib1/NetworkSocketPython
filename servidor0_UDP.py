@@ -3,7 +3,7 @@
 import socket
 
 
-my_ip=''    #any interface
+my_ip='127.0.0.1'    #Qualquer um, usamos o local
 my_port=5000    #port to listen on
 
 udp=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
