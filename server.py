@@ -71,7 +71,7 @@ def receive_file(sock, client_addr, expected_seq,simulation_mode="normal"):
     packet_to_drop = expected_seq + 1  # O segundo pacote de dados
     
     # --- Constantes para a Simulação Fuzzing ---
-    LOSS_CHANCE = 0.15      # 15% de chance de perder o pacote
+    LOSS_CHANCE = 0.3      # 15% de chance de perder o pacote
     CORRUPTION_CHANCE = 0.05 # 5% de chance de corromper
 
     print("[Servidor] Esperando pelo arquivo...")
@@ -206,7 +206,7 @@ def main():
             print(f"Argumento '{arg}' não reconhecido. Rodando em modo normal.")
     # --- Fim da Lógica ---
 
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM) # define conf do socket (AF_NET indica IPv_4 e SOCK_DGRAM indica UDP)
     sock.bind((config.SERVER_HOST, config.SERVER_PORT))
 
     print(f"\n[Servidor] Servidor iniciado em modo: {simulation_mode.upper()}")

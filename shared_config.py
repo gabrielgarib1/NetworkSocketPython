@@ -7,7 +7,7 @@ import zlib    #for checksum calculation
 
 
 # --- Configurações do Servidor ---
-SERVER_HOST = '127.0.0.1'
+SERVER_HOST = '127.0.0.1' # Localhost de Cria.
 SERVER_PORT = 5000
 
 # --- Configurações do Protocolo ---
