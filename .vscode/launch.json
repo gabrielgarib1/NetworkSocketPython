@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cliente RTP Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/client.py", // Certifique-se de que o caminho está correto
+            "console": "integratedTerminal", // Roda no terminal do VS Code
+            "args": [
+                "test_file.txt" // <-- ESTE É O ARGUMENTO DE LINHA DE COMANDO
+            ],
+            "justMyCode": true 
+        }
+    ]
+}
